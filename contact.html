@@ -12,10 +12,10 @@
                 <img src="./style/image/logo2.png" class="logo" />
             </a>
                 <div class="flex-left nav align-center">
-                    <a href="./product.html" style="color:#0f1535">Products</a>
-                    <a href="#" style="color:#0f1535">Why BitSync</a>
+                    <a href="index.html#product_section" style="color:#0f1535">Products</a>
+                    <a href="index.html#why_section" style="color:#0f1535">Why BitSync</a>
                     <a href="./Pricing.html" style="color:#0f1535">Pricing</a>
-                    <a href="./started.html" style="color:#0f1535">Get Started</a>
+                    <a href="index.html#started_section" style="color:#0f1535">Get Started</a>
                     <a href="./contact.html" style="color:#0f1535">Contact</a>
                 </div>
             </header>
@@ -68,10 +68,7 @@
                                 <textarea class="textarea"></textarea>
                             </div>
                         </div>
-                        <p class="tip">
-                            *** Please add an optional section to book an appointment here. Perhaps something like this https://imgur.com/a/TzCgsZ6 ****
-                        </p>
-                        <input type="submit" value="Submit" class="btn" />
+                        <input type="submit" value="Submit" class="btn" onclick="submitcontact()"/>
                     </form>
 
                 </div>
@@ -101,4 +98,11 @@
         </div>
     </footer>
 </body>
+
+<script type="text/javascript">
+    function submitcontact() {
+        alert("We received your information. Please book an appointment to discuss in person about your unique case.");
+        window.open("https://calendly.com/ranji999/30min", "_blank")
+    }
+</script>
 </html>
