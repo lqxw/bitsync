@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
     <meta name="viewport" content="width=device-width,initial-scale=0,maximum-scale=2,user-scalable=no">
-
+    <title>Homepage</title>
     <link rel="stylesheet" href="./css/font.css">
-
     <script>
         (function(win) {
             var tid;
@@ -44,8 +42,8 @@
             box-sizing: border-box;
             position: absolute;
             top: 0;
-            left: 0;
             z-index: 2;
+            left: 0;
         }
         header .logo{
             display: flex;
@@ -148,66 +146,153 @@
             width: .17rem;
             height: auto;
         }
-        .index-banner{
+        .cpu-banner{
             width: 100%;
-            height: 8.45rem;
+            height: 6.1rem;
+            margin-top: 1.08rem;
             position: relative;
         }
-        .index-banner>img{
-            width: 13.46rem;
+        .cpu-banner .left{
             position: absolute;
+            width: 6.8rem;
             height: auto;
-            left: .34rem;
-            top: .09rem;
+            top: 1rem;
+            left: 2.1rem;
         }
-        .index-content{
+        .cpu-banner .content{
+            left: 10.5rem;
             position: absolute;
-            width: 6.5rem;
-            left: 10.21rem;
             top: 50%;
             transform: translateY(-50%);
         }
-        .index-content h2{
-            color: #000;
+        .cpu-banner .content img{
+            width: 3.9rem;
+            height: auto;
+            display: block;
+        }
+        .cpu-banner .content p{
+            color: rgba(0, 0, 0, 0.90);
             font-family: Eudoxus Sans;
-            font-size: .56rem;
+            font-size: .30rem;
             font-style: normal;
-            font-weight: 700;
-            line-height: 1;
-            margin: 0;
-            padding: 0;
+            font-weight: 400;
+            line-height: normal;
+            letter-spacing: -0.6px;
         }
-        .index-content h2 span{
-            color: #00AEEF;
+
+        .cpu-model-1{
+            width: 16.71rem;
+            margin: 1.07rem auto 1.04rem;
         }
-        .index-content h3{
+        .cpu-model-1 h2{
             margin: 0;
-            padding: 0;
-            margin: .2rem 0;
-            color: #6872B0;
+            color: #000;
+            text-align: center;
             font-family: Eudoxus Sans;
             font-size: .32rem;
             font-style: normal;
             font-weight: 700;
-
-            line-height: 1;
-            letter-spacing: 1.92px;
-            text-transform: uppercase;
+            line-height: normal;
+            letter-spacing: 6.4px;
         }
-        .index-content p{
-            margin: 0;
-            padding: 0;
-            color: rgba(0, 0, 0, 0.90);
+        .cpu-model-1 .content{
+            display: flex;
+            justify-content: space-between;
+            margin-top: .5rem;
+        }
+        .cpu-model-1 .content .item{
+            width: 3.06rem;
+            height: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .cpu-model-1 .content .item img{
+            width: 100%;
+        }
+
+        .cpu-model-2{
+            width: 100%;
+            height: 7.17rem;
+            box-sizing: border-box;
+            padding: .5rem 1.68rem;
+            background: rgba(0, 174, 239, 0.05);
+        }
+        .cpu-model-2 h2{
+            color: #000;
+            text-align: center;
             font-family: Eudoxus Sans;
-            font-size: .3rem;
+            font-size: .32rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 6.4px;
+            margin: 0;
+        }
+        .cpu-model-2 .table{
+            width: 100%;
+            height: 3.57rem;
+            border-radius: .30rem;
+            border: 1px solid var(--Gradient-1, #53D0FF);
+            background: #FFF;
+            box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.15);
+            margin-top: .5rem;
+        }
+        .cpu-model-2 .table .row{
+            display: flex;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.30);
+            box-sizing: border-box;
+            justify-content: space-between;
+            height: 1.38rem;
+        }
+        .cpu-model-2 .table .row:nth-of-type(1){
+            height: .8rem;
+        }
+
+        .cpu-model-2 .table .row:last-of-type{
+            border: none;
+        }
+        .cpu-model-2 .table .row div{
+            width: 2.2rem;
+            border-right: 1px solid rgba(0, 0, 0, 0.30);
+            box-sizing: border-box;
+            color: #000;
+            font-family: Eudoxus Sans;
+            font-size: .32rem;
             font-style: normal;
             font-weight: 300;
             line-height: normal;
-            letter-spacing: -0.6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .index-content button{
-            width: 2.26rem;
+
+        .cpu-model-2 .table .row:nth-of-type(1) div{
+            font-weight: 400;
+        }
+        .cpu-model-2 .table .row div:nth-of-type(1){
+            width: 2.5rem;
+            padding-left: .3rem;
+            justify-content: left;
+        }
+        .cpu-model-2 .table .row div:last-of-type{
+            border: none;
+        }
+        .cpu-model-2 .buttonBox p{
+            margin-top: .5rem;
+            color: rgba(0, 0, 0, 0.90);
+            text-align: center;
+            font-family: Eudoxus Sans;
+            font-size: .32rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: -0.64px;
+            margin-bottom: .2rem;
+        }
+        .cpu-model-2 .buttonBox button{
             height: .6rem;
+            padding: 0 .3rem;
             border-radius: .15rem;
             background: var(--Button---Black, radial-gradient(57.1% 100% at 50% 99%, #2B3990 0%, rgba(43, 57, 144, 0.83) 100%));
             box-shadow: 0px 6px 28.1px 0px rgba(9, 9, 9, 0.30);
@@ -222,217 +307,133 @@
             align-items: center;
             margin-top: .2rem;
             justify-content: center;
+            margin: 0 auto;
         }
-        .index-content button img{
+        .cpu-model-2 .buttonBox button img{
             margin-left: .1rem;
             width: .17rem;
             height: auto;
         }
-        .index-model-1{
+
+        .cpu-model-3{
+            margin: 1rem auto;
             width: 100%;
-            height: 3.68rem;
-            background: rgba(0, 174, 239, 0.05);
-            padding: .5rem 1.345rem;
             box-sizing: border-box;
+            padding: 0 2.333rem;
+            display: flex;
+            justify-content: space-between;
         }
-        .index-model-1>p{
-            color: #000;
-            text-align: center;
+        .cpu-model-3 .left{
+            width: 8.7rem;
+        }
+        .cpu-model-3 .left>h2{
+            color: #090909;
             font-family: Eudoxus Sans;
-            font-size: .32rem;
+            font-size: .64rem;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            letter-spacing: 6.4px;
+            margin-top: .1rem;
+            margin-bottom: .36rem;
+        }
+        .cpu-model-3 .left>h2 span{
+            color: #0C9CD1;
+        }
+        .cpu-model-3 .left>p{
+            color: rgba(0, 0, 0, 0.90);
+            font-family: Eudoxus Sans;
+            font-size: .38rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
             margin: 0;
-            padding: 0;
+            letter-spacing: -0.76px;
         }
-        .index-model-1-content{
-            width: 100%;
-            height: 1.78rem;
+        .cpu-model-3 .left>div{
             display: flex;
-            margin-top: .5rem;
+            padding-left: .45rem;
+            margin: .2rem 0;
         }
-        .index-model-1-content .item{
-            width: 3.6775rem;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+        .cpu-model-3 .left>div img{
+            width: .3rem;
+            display: block;
+            height: .3rem;
         }
-        .index-model-1-content .item img{
-            height: .6rem;
-            width: auto;
+        .cpu-model-3 .left>div p{
+            color: rgba(0, 0, 0, 0.90);
+            font-family: Eudoxus Sans;
+            font-size: .26rem;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            letter-spacing: -0.52px;
+            margin: 0;
         }
-        .index-model-1-content .item p{
+        .cpu-model-3 .right{
+            width: 4.3rem;
+        }
+        .cpu-model-3 .right>h2{
             color: #1A1A1A;
             font-family: Eudoxus Sans;
             font-size: .32rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            letter-spacing: -0.64px;
             margin: 0;
-            padding: 0;
         }
-        .index-model-1-content span{
-            display: block;
-            height: 100%;
-            width: 1px;
-            background: rgba(43, 57, 144, 0.40);
-            margin: 0 .3rem;
-        }
-        .index-model-2{
-            width: 17.9rem;
-            margin: .7rem auto 1rem;
-            background: url("./images/im2-bg.png");
-            background-size: 100% 100%;
-            box-sizing: border-box;
-            height: 11.62rem;
-            overflow: hidden;
-        }
-        .index-model-2>p{
-            width: fit-content;
-            height: 0.48rem;
+        .cpu-model-3 .right .content{
+            width: 3.9rem;
             margin: 0 auto;
-            white-space: nowrap;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #2B3990;
-            font-family: Eudoxus Sans;
-            font-size: .22rem;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: 1.76px;
-            border-radius: 0.54rem;
-            border: 1px solid #00AEEF;
-            margin-top: 0.6rem;
-            padding: 0 0.3rem;
-        }
-        .index-model-2>img{
-            margin: 0 auto;
-            margin-top: .3rem;
-            width: 5.17rem;
-            height: auto;
-            display: block;
-        }
-        .index-model-2 .content{
-            width: 16.8rem;
-            margin: 0 auto;
-            margin-top: .44rem;
-            display: flex;
             justify-content: space-between;
+            height: 4rem;
+            display: flex;
         }
-        .index-model-2 .content .item{
-            width: 8.3rem;
-            height: 8.9rem;
-            border-radius: .50rem;
-            border: 1px solid rgba(77, 104, 198, 0.80);
-            background: #FFF;
-            box-shadow: 0px 8px 28.2px 0px rgba(0, 0, 0, 0.00);
-            box-sizing: border-box;
-            padding: .5rem .6rem;
-            position: relative;
-            z-index: 2;
+        .cpu-model-3 .right .content .item{
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
         }
-        .index-model-2 .content .item h2{
-            margin: 0;
-            padding: 0;
+        .cpu-model-3 .right .content .item p{
             color: #000;
             font-family: Eudoxus Sans;
-            font-size: .48rem;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
-        }
-        .index-model-2 .content .item p{
-            color: rgba(0, 0, 0, 0.80);
-            font-family: Eudoxus Sans;
-            font-size: .3rem;
+            font-size: .28rem;
+            margin: 0;
             font-style: normal;
             font-weight: 300;
             line-height: normal;
-            letter-spacing: -0.6px;
-            margin-top: .2rem;
-            margin-bottom: 0;
         }
-        .index-model-2 .content .item .box{
-            display: flex;
-            margin-top: .2rem;
+        .cpu-model-3 .right .content .item div{
+            width: .95rem;
+            height: 1.85rem;
+            border-radius: .1rem;
+            border: 2px solid rgba(149, 149, 149, 0.60);
+            background: rgba(217, 217, 217, 0.20);
+            margin: .1rem auto;
         }
-        .index-model-2 .content .item .box div{
-            display: flex;
-            margin-right: .23rem;
-            align-items: center;
-        }
-        .index-model-2 .content .item .box div img{
-            height: .28rem;
-            width: auto;
-            margin-right: .1rem;
-        }
-        .index-model-2 .content .item .box div p{
-            color: #132DCE;
+        .cpu-model-3 .right .content .item h3{
+            color: #000;
             font-family: Eudoxus Sans;
-            font-size: .22rem;
+            font-size: .28rem;
             font-style: normal;
-            font-weight: 400;
             margin: 0;
+            font-weight: 300;
             line-height: normal;
         }
-        .index-model-2 .content .item .buttonBox{
-            display: flex;
+        .cpu-model-3 .right .content .item:nth-of-type(1) p,.cpu-model-3 .right .content .item:nth-of-type(1) h3{
+            font-weight: 500;
         }
-        .index-model-2 .content .item .buttonBox button{
-            width: 1.72rem;
-            height: .44rem;
-            border-radius: .11rem;
-            background: var(--Button---Black, radial-gradient(57.1% 100% at 50% 99%, #2B3990 0%, rgba(43, 57, 144, 0.83) 100%));
-            box-shadow: 0px 6px 28.1px 0px rgba(9, 9, 9, 0.30);
-            outline: none;
+        .cpu-model-3 .right .content .item:nth-of-type(1) div{
+            height: 1.35rem;
+            background: radial-gradient(144.87% 100% at 50% 99%, #6283F5 0%, #4BCEFF 100%);
             border: none;
-            color: #FFF;
-            font-family: Eudoxus Sans;
-            font-size: .18rem;
-            font-style: normal;
-            font-weight: 400;
-            display: flex;
-            align-items: center;
-            margin-top: .2rem;
-            justify-content: center;
         }
-        .index-model-2 .content .item .buttonBox button img{
-            margin-left: .1rem;
-            width: .17rem;
-            height: auto;
+        .cpu-model-3 .right .content .item:nth-of-type(3) div{
+            height: 3.08rem;
         }
-        .index-model-2 .content .item .buttonBox button:nth-of-type(2){
-            margin-left: .23rem;
-            border-radius: .11rem;
-            border: 0.5px solid #090909;
-            background: #F8F8F8;
-            box-shadow: 0px 6px 28.1px 0px rgba(0, 0, 0, 0.10);
-            color: #090909;
-            font-family: Eudoxus Sans;
-            font-size: .18rem;
-            font-style: normal;
-            font-weight: 400;
-        }
-        .index-model-2 .content .item>img{
-            width: 6.35rem;
-            margin-top: .7rem;
-            margin-left: .36rem;
-        }
-        .index-model-2 .content .item:nth-of-type(2)>img{
-            width: 3.58rem;
-            margin: 0 auto;
-            display: block;
-            margin-top: -0.8rem;
-            position: relative;
-            z-index: -1;
-            margin-left: 2.15rem;
-        }
+
         .index-model-3{
             margin: 0 auto;
             width: 16.80rem;
@@ -598,7 +599,7 @@
     </style>
 </head>
 <body>
-     <noscript>
+ <noscript>
          Your browser does not support JavaScript!
       </noscript>
 <header>
@@ -624,97 +625,108 @@
         </a>
     </div>
 </header>
-<div class="index-banner">
-    <img src="./images/ib.png" >
-    <div class="index-content">
-        <h2><span>BitSync</span> Cloud</h2>
-        <h3>A100S AVAILABLE FOR $1.80/HR</h3>
-        <p>Finish Setup and <b>Running</b> Within Minutes!</p>
+
+<div class="cpu-banner">
+    <img class="left" src="./images/im21.png" >
+    <div class="content">
+        <img src="./images/cpu.svg">
+        <p>Unparalleled Access to and pricing for the<br>highest-end NVIDIA GPUs.</p>
     </div>
 </div>
 
-<div class="index-model-1">
-    <p>THE PREMIER GPU CLOUD FOR AI & ML</p>
-    <div class="index-model-1-content">
-        <div class="item">
-            <img src="./images/im11.svg">
-            <p><b>70%</b> Less Expensive</p>
-        </div>
-        <span></span>
-        <div class="item">
-            <img src="./images/im12.svg">
-            <p>Actual Availability</p>
-        </div>
-        <span></span>
-        <div class="item">
-            <img src="./images/im13.svg">
-            <p>Free Bandwidth</p>
-        </div>
-        <span></span>
-        <div class="item">
-            <img src="./images/im14.svg">
-            <p>Tier 4 Datacenters</p>
-        </div>
-    </div>
-</div>
-
-<div class="index-model-2">
-    <p>BitSync Cloud</p>
-    <img src="./images/im2-t.svg">
+<div class="cpu-model-1">
+    <h2>PRE-INSTALLED WITH POPULAR AI AND ML FRAMEWORKS</h2>
     <div class="content">
         <div class="item">
-            <h2>GPU Compute</h2>
-            <p>Launch containers or virtual machines with the latest NVIDIA GPUs for your AI training, fine tuning, and inference needs.</p>
-            <div class="box">
-                <div>
-                    <img src="./images/im14.svg">
-                    <p>Tier 4 Datacenters</p>
-                </div>
-                <div>
-                    <img src="./images/im13.svg">
-                    <p>Free Bandwidth</p>
-                </div>
-                <div>
-                    <img src="./images/im11.svg">
-                    <p>Lowest Pricing</p>
-                </div>
-            </div>
-            <div class="buttonBox">
-                <button onclick="window.open('contact.html','_blank')">
-                    Deploy Now
-                    <img src="./images/ha.svg">
-                </button>
-                <button onclick="window.open('gpu.html','_blank')">
-                Learn More</button>
-            </div>
-            <img src="./images/im21.png">
+            <img src="./images/cm11.png">
         </div>
         <div class="item">
-            <h2>Server Management</h2>
-            <p>Remove the difficulty of hosting servers on-prem. BitSync can host them for you to guarantee uptime and maximize server lifespans.</p>
-            <div class="box">
-                <div>
-                    <img src="./images/im14.svg">
-                    <p>Tier 4 Datacenters</p>
-                </div>
-                <div>
-                    <img src="./images/im15.svg">
-                    <p>Full Stack Support</p>
-                </div>
-                <div>
-                    <img src="./images/im16.svg">
-                    <p>Strict Privacy</p>
-                </div>
+            <img src="./images/cm12.png">
+        </div>
+        <div class="item">
+            <img src="./images/cm13.png">
+        </div>
+        <div class="item">
+            <img src="./images/cm14.png">
+        </div>
+        <div class="item">
+            <img src="./images/cm15.png">
+        </div>
+    </div>
+</div>
+
+<div class="cpu-model-2">
+    <h2>AVAILABLE INSTANCES</h2>
+    <div class="table">
+        <div class="row">
+            <div>GPU</div>
+            <div>vCPU</div>
+            <div>RAM</div>
+            <div>Storage</div>
+            <div>On-demand</div>
+            <div>6 months</div>
+            <div>1 year</div>
+        </div>
+        <div class="row">
+            <div>1x NVIDIA<br>A100 SXM</div>
+            <div>12</div>
+            <div>128GB</div>
+            <div>256GB</div>
+            <div>$2.35</div>
+            <div>$2.08</div>
+            <div>$1.80</div>
+        </div>
+        <div class="row">
+            <div>8x NVIDIA<br>A100 SXM</div>
+            <div>96</div>
+            <div>1,024GB</div>
+            <div>2,048GB</div>
+            <div>$18.80</div>
+            <div>$16.60</div>
+            <div>$14.40</div>
+        </div>
+    </div>
+    <div class="buttonBox">
+        <p>Need a custom instance?</p>
+        <button onclick="window.open('contact.html','_blank')">
+            Speak with Sales
+            <img src="./images/ha.svg">
+        </button>
+    </div>
+</div>
+
+<div class="cpu-model-3">
+    <div class="left">
+        <h2>The Premier <span>GPU Cloud</span><br>For AI and ML</h2>
+        <p>Reduce your cloud bill by over 70%</p>
+        <div>
+            <img src="./images/cc.svg">
+            <p>Transparent pricing with free bandwidth and no hidden costs.</p>
+        </div>
+        <p>Enjoy BitSync’s Full Stack support</p>
+        <div>
+            <img src="./images/cc.svg">
+            <p>Expert support for computing storage, drivers, frameworks and anything else you need.</p>
+        </div>
+    </div>
+    <div class="right">
+        <h2>A100 GPU Hourly Cost Across<br>Cloud Providers</h2>
+        <div class="content">
+            <div class="item">
+                <p>$1.80</p>
+                <div></div>
+                <h3>BitSync</h3>
             </div>
-            <div class="buttonBox">
-                <button onclick="window.open('contact.html','_blank')">
-                    Deploy Now
-                    <img src="./images/ha.svg">
-                </button>
-                <button onclick="window.open('cluster.html','_blank')">
-                Learn More</button>
+            <div class="item">
+                <p>$2.46</p>
+                <div></div>
+                <h3>GCP</h3>
             </div>
-            <img src="./images/im22.png">
+            <div class="item">
+                <p>$4.10</p>
+                <div></div>
+                <h3>AWS</h3>
+            </div>
         </div>
     </div>
 </div>
