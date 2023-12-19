@@ -382,39 +382,39 @@
     <img src="./images/ct.svg">
     <div class="title">
         <p>Let us know how we can help.</p>
-        <a href="mailto:hello@bitsync.com">
+        <a href="mailto:hello@bitsync.com?subject=GPU Server Inquire">
             <img src="./images/mail.svg">
             hello@bitsync.com
         </a>
     </div>
-    <form>
+    <form action="mailto:hello@bitsync.com" method="post" enctype="text/plain">
         <div class="input-group">
             <div class="input-row" style="width: 4.16rem">
-                <input type="text" placeholder="Your Name *">
+                <input type="text" name="first name" placeholder="First Name *">
             </div>
             <div class="input-row" style="width: 4.16rem">
-                <input type="text" placeholder="Last Name">
+                <input type="text" name="last name" placeholder="Last Name">
             </div>
         </div>
         <div class="input-group">
             <div class="input-row">
-                <input type="text" placeholder="Company Title">
+                <input type="text" name="company" placeholder="Company">
             </div>
         </div>
         <div class="input-group">
             <div class="input-row">
-                <input type="text" placeholder="Job Title">
+                <input type="text" name="title" placeholder="Job Title">
             </div>
         </div>
         <div class="input-group">
             <div class="input-row">
-                <textarea placeholder="Message *"></textarea>
+                <textarea class="message_area" placeholder="Message *" name="message" ></textarea>
             </div>
         </div>
         <button>Send</button>
     </form>
     <button onclick="window.open('https://calendly.com/ranji999/bitsync?month=2023-12','_blank')">
-        Schedule a meeting
+        Or schedule a meeting
         <img src="./images/ha.svg">
     </button>
 </div>
