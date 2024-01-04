@@ -186,7 +186,7 @@
             width: .28rem;
             margin-right: .1rem;
         }
-        .contact-form form{
+        .contact-form .myform{
             width: 100%;
             height: 5.6rem;
             border-radius: .2rem;
@@ -197,17 +197,17 @@
             box-sizing: border-box;
             margin-top: .2rem;
         }
-        .contact-form form .input-group{
+        .contact-form .myform .input-group{
             margin-bottom: .2rem;
             display: flex;
             justify-content: space-between;
         }
-        .contact-form form .input-group .input-row{
+        .contact-form .myform .input-group .input-row{
             position: relative;
             width: 100%;
             display: flex;
         }
-        .contact-form form .input-group .input-row input{
+        .contact-form .myform .input-group .input-row input{
             width: 100%;
             height: .6rem;
             border-radius: .16rem;
@@ -216,7 +216,7 @@
             padding-left: .15rem;
             box-sizing: border-box;
         }
-        .contact-form form .input-group .input-row textarea{
+        .contact-form .myform .input-group .input-row textarea{
             width: 100%;
             height: 1.43rem;
             border-radius: .16rem;
@@ -225,7 +225,7 @@
             padding: .15rem;
             box-sizing: border-box;
         }
-        .contact-form form .input-group .input-row span{
+        .contact-form .myform .input-group .input-row span{
             display: block;
             position: absolute;
             top: 50%;
@@ -240,7 +240,7 @@
             left: 1.1rem;
             text-transform: capitalize;
         }
-        .contact-form form button{
+        .contact-form .myform button{
             display: flex;
             height: .6rem;
             padding: 0px 0.56rem;
@@ -378,6 +378,30 @@
     </div>
 </header>
 
+<script>
+function mailToAddress() {
+    var firstname = document.getElementById("first_name").value;
+    if (firstname == null || firstname == "") {
+        alert("Please fill first name");
+        return;
+    }
+    var lastname = document.getElementById("last_name").value;
+    var company = document.getElementById("company").value;
+    var email = document.getElementById("email").value;
+    if (email == null || email == "") {
+        alert("Please fill email");
+        return;
+    }
+    var message = document.getElementById("message").value;
+    if (message == null || message == "") {
+        alert("Please fill message");
+        return;
+    }
+    var text = "Name:"+firstname+" "+lastname+"%0D%0ACompany:"+company+"%0D%0AEmail:" + email+"%0D%0AMessage:"+message;
+    document.location.href = ("mailto:hello@bitsync.com?subject=GPU Server Inquire&body="+text);
+}
+</script>
+
 <div class="contact-form">
     <img src="./images/ct.svg">
     <div class="title">
@@ -387,38 +411,38 @@
             hello@bitsync.com
         </a>
     </div>
-    <form action="mailto:hello@bitsync.com?subject=GPU Server Inquire" method="post" enctype="text/plain">
+    <div class="myform">
         <div class="input-group">
             <div class="input-row" style="width: 4.16rem">
-                <input type="text" name="first name" placeholder="First Name *">
+                <input type="text" name="first name" id="first_name" placeholder="First Name *">
             </div>
             <div class="input-row" style="width: 4.16rem">
-                <input type="text" name="last name" placeholder="Last Name">
+                <input type="text" name="last name" id="last_name" placeholder="Last Name">
             </div>
         </div>
         <div class="input-group">
             <div class="input-row">
-                <input type="text" name="company" placeholder="Company">
+                <input type="text" name="company" id="company" placeholder="Company">
             </div>
         </div>
         <div class="input-group">
             <div class="input-row">
-                <input type="text" name="title" placeholder="Job Title">
+                <input type="text" name="email" id="email" placeholder="Email *">
             </div>
         </div>
         <div class="input-group">
             <div class="input-row">
-                <textarea class="message_area" placeholder="Message *" name="message" ></textarea>
+                <textarea class="message_area" placeholder="Message *" id="message" name="message" ></textarea>
             </div>
         </div>
-        <button>Send</button>
+        <button onclick="mailToAddress()">Send</button>
     </form>
+
     <button onclick="window.open('https://calendly.com/ranji999/bitsync?month=2023-12','_blank')">
         Or schedule a meeting
         <img src="./images/ha.svg">
     </button>
 </div>
-
 
 
 <footer>
