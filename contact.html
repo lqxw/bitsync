@@ -6,22 +6,19 @@
     <link rel="stylesheet" href="./css/font.css">
     <title>Contact Us - BitSync</title>
     <script>
-        var PC = IsPC();
-    if (PC) {
-        location.href = "http://bitsync.com/contact_mobile.html";
-    }
-
-    function IsPC() {
+    function isPC() {
         var userAgentInfo = navigator.userAgent;
-        var Agents = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
-        var flag = true;
-        for (var v = 0; v < Agents.length; v++) {
-            if (userAgentInfo.indexOf(Agents[v]) > 0) {
-                flag = false;
-                break;
+        var agents = ["Android", "iPhone", "iPad"];
+        for (var v = 0; v < agents.length; v++) {
+            if (userAgentInfo.indexOf(agents[v]) > 0) {
+                return false
             }
         }
-        return flag;
+        return true;
+    }
+    
+    if (!isPC()) {
+        location.href = "http://bitsync.com/contact_mobile.html";
     }
     
         (function(win) {
