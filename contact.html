@@ -7,21 +7,6 @@
     <title>Contact Us - BitSync</title>
         <link rel="icon" type="image/x-icon" href="images/title_icon.png">
     <script>
-    function isPC() {
-        var userAgentInfo = navigator.userAgent;
-        var agents = ["Android", "iPhone", "iPad"];
-        for (var v = 0; v < agents.length; v++) {
-            if (userAgentInfo.indexOf(agents[v]) > 0) {
-                return false
-            }
-        }
-        return true;
-    }
-    
-    if (!isPC()) {
-        location.href = "http://bitsync.com/contact_mobile.html";
-    }
-    
         (function(win) {
             var tid;
 
@@ -374,18 +359,6 @@
         <img src="./images/logo.png">
     </a>
     <div class="nav">
-        <ul>
-            <li>
-                <a href="JavaScript:;">
-                    Products
-                    <img src="./images/arrow.svg">
-                </a>
-                <ul>
-                    <li><a href="gpu.html">GPU Compute</a></li>
-                    <li><a href="cluster.html">Model Inference</a></li>
-                </ul>
-            </li>
-        </ul>
         <a href="contact.html">
             Deploy Now
             <img src="./images/ha.svg">
@@ -464,14 +437,11 @@ function mailToAddress() {
     <div class="content">
         <div class="left">
             <img src="./images/flogo.png">
-            <p>BitSync provides unparalleled access to GPUs for deep learning at massive scale, with high-speed and adaptable infrastructure</p>
         </div>
         <div class="right">
             <div class="main">
                 <div class="item">
                     <h2>LINKS</h2>
-                    <a href="./gpu.html">GPU Compute</a>
-                    <a href="./cluster.html">Model Inference</a>
                     <a href="./contact.html">Contact</a>
                 </div>
                 <div class="item">
