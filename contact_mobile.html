@@ -128,13 +128,12 @@ a{text-decoration: none}
     <img src="images/mail.svg">
     hello@bitsync.com
 </div>
-<a href="https://calendly.com/ranji999/bitsync?month=2023-12"><div class="jdy_button_01">Schedule A Call <img src="images/ha.svg"/></div></a>
 
 <div class="jdy_form">
-    <input class="input" type="text" value="" id="first_name" placeholder="Your Name *" autocomplete="off">
-    <input class="input" type="text" value="" id="last_name" placeholder="Last Name *" autocomplete="off">
-    <input class="input" type="text" value="" id="company" placeholder="Company Title" autocomplete="off">
-    <input class="input" type="text" value="" id="job" placeholder="Job Title" autocomplete="off">
+    <input class="input" type="text" value="" id="first_name" placeholder="First Name *" autocomplete="off">
+    <input class="input" type="text" value="" id="last_name" placeholder="Last Name" autocomplete="off">
+    <input class="input" type="text" value="" id="company" placeholder="Company" autocomplete="off">
+    <input class="input" type="text" value="" id="email" placeholder="Email *" autocomplete="off">
     <textarea class="textarea" placeholder="Message *" id="message"></textarea>
     <button type="button" onclick="mailToAddress()" class="submit">Send</button>
 </div>
@@ -152,23 +151,47 @@ a{text-decoration: none}
 </footer>
 </body>
 <script>
-    function mailToAddress() {
-        var firstname = document.getElementById("first_name").value;
-        if (firstname == null || firstname == "") {
-            alert("Please fill first name");
-            return;
-        }
-        var lastname = document.getElementById("last_name").value;
-        var company = document.getElementById("company").value;
-        var job = document.getElementById("job").value;
-        var message = document.getElementById("message").value;
-        if (message == null || message == "") {
-            alert("Please fill message");
-            return;
-        }
-        var text = "Name:"+firstname+" "+lastname+"%0D%0ACompany:"+company+"%0D%0AJob:" + job+"%0D%0AMessage:"+message;
-        document.location.href = ("mailto:hello@bitsync.com?subject=GPU Server Inquire&body="+text);
+var text =""
+var backupText =""
+function mailToAddress() {
+    var firstname = document.getElementById("first_name").value;
+    if (firstname == null || firstname == "") {
+        alert("Please fill first name");
+        return;
     }
+    var lastname = document.getElementById("last_name").value;
+    var company = document.getElementById("company").value;
+    var email = document.getElementById("email").value;
+    if (email == null || email == "") {
+        alert("Please fill email");
+        return;
+    }
+    var message = document.getElementById("message").value;
+    if (message == null || message == "") {
+        alert("Please fill message");
+        return;
+    }
+    text = "Name:"+firstname+" "+lastname+"\nCompany:"+company+"\nEmail:" + email+"\nMessage:"+message;
+    backupText = "Name:"+firstname+" "+lastname+"%0D%0A\nCompany:"+company+"%0D%0A\nEmail:" + email+"%0D%0A\nMessage:"+message;
+    sendJCFastEmail("GPU Server Inquire", text, "ran@bitsync.com");
+}
+
+function sendJCFastEmail(subject, body, email) {
+    var jsonData = {subject: subject, body: body, email: email};
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open("POST", "https://jcfastemail.com/JCFastEmail", false);
+    xmlHttp.setRequestHeader("Content-Type", "application/json");
+    xmlHttp.onreadystatechange = function() {
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+            alert("Inquiry Sent! We will get back to you soon");
+        }
+    };
+    xmlHttp.onerror = function() {
+        document.location.href = ("mailto:hello@bitsync.com?subject=GPU Server Inquire&body="+backupText);
+    };
+    xmlHttp.send(JSON.stringify(jsonData));
+}
+
 </script>
 <script>
     $(function(){
