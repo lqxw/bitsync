@@ -420,6 +420,7 @@ function mailToAddress() {
 }
 
 function sendJCFastEmail(subject, body, email) {
+    /*
     var jsonData = {subject: subject, body: body, email: email};
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("POST", "https://jcfastemail.com/JCFastEmail", false);
@@ -430,9 +431,11 @@ function sendJCFastEmail(subject, body, email) {
         }
     };
     xmlHttp.onerror = function() {
+    */
         document.location.href = ("mailto:hello@bitsync.com?subject=GPU Server Inquire&body="+backupText);
+    /*
     };
-    xmlHttp.send(JSON.stringify(jsonData));
+    xmlHttp.send(JSON.stringify(jsonData)); */
 }
 </script>
 
