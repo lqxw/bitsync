@@ -271,7 +271,7 @@
         }
         .cpu-model-2 .table{
             width: 100%;
-            height: 3.57rem;
+            height: 4.95rem;
             border-radius: .30rem;
             border: 1px solid var(--Gradient-1, #53D0FF);
             background: #FFF;
@@ -288,7 +288,6 @@
         .cpu-model-2 .table .row:nth-of-type(1){
             height: .8rem;
         }
-
         .cpu-model-2 .table .row:last-of-type{
             border: none;
         }
@@ -319,7 +318,7 @@
             border: none;
         }
         .cpu-model-2 .buttonBox p{
-            margin-top: .5rem;
+            margin-top: 0.8rem;
             color: rgba(0, 0, 0, 0.90);
             text-align: center;
             font-family: Eudoxus Sans;
@@ -698,39 +697,42 @@
     <h2>AVAILABLE INSTANCES</h2>
     <div class="table">
         <div class="row">
-            <div style="width: 3rem;">GPU</div>
+            <div style="width: 4rem;">GPU</div>
             <div>vCPU</div>
             <div>RAM</div>
             <div>Storage</div>
-            <div>On-demand</div>
+            <div style="width: 3rem;">On-demand</div>
             <div>1 year</div>
             <div>3 year</div>
         </div>
         <div class="row">
-            <div style="width: 3rem;">1x NVIDIA 80GB<br>A100 SXM</div>
-            <div>12</div>
-            <div>128GB</div>
-            <div>256GB</div>
-            <div>$1.71</div>
-            <div>$1.45</div>
-            <div>$1.23</div>
-        </div>
-        <div class="row">
-            <div style="width: 3rem;">8x NVIDIA 80GB<br>A100 SXM</div>
+            <div style="width: 4rem;">8x A100 80GB SXM</div>
             <div>96</div>
-            <div>1,024GB</div>
-            <div>2,048GB</div>
-            <div>$13.68</div>
+            <div>1024GB</div>
+            <div>4TB</div>
+            <div style="width: 3rem;">$13.68</div>
             <div>$11.60</div>
             <div>$9.81</div>
         </div>
-    </div>
-    <div class="buttonBox">
-        <p>Need a custom instance?</p>
-        <button onclick="window.open('contact.html','_blank')">
-            Talk to Sales
-            <img src="./images/ha.svg">
-        </button>
+        <div class="row">
+            <div style="width: 4rem;">8x H100 80GB SXM</div>
+            <div>128</div>
+            <div>2048GB</div>
+            <div>8TB</div>
+            <div style="width: 3rem;">$19.8</div>
+            <div>$16.7</div>
+            <div>$14.2</div>
+        </div>
+
+        <div class="row">
+            <div style="width: 4rem;">8x H200 141GB SXM</div>
+            <div>128</div>
+            <div>2048GB</div>
+            <div>8TB</div>
+            <div style="width: 3rem;">Coming Soon</div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
 </div>
 
