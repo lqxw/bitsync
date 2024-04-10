@@ -6,6 +6,45 @@
     <title>GPU Compute - BitSync</title>
         <link rel="icon" type="image/x-icon" href="images/title_icon.png">
     <link rel="stylesheet" href="./css/font.css">
+    
+      <script>
+    function isPC() {
+        var userAgentInfo = navigator.userAgent;
+        var agents = ["Android", "iPhone", "iPad"];
+        for (var v = 0; v < agents.length; v++) {
+            if (userAgentInfo.indexOf(agents[v]) > 0) {
+                return false
+            }
+        }
+        return true;
+    }
+    
+    if (!isPC()) {
+        location.href = "http://bitsync.com/gpu_mobile.html";
+    }
+    
+        (function(win) {
+            var tid;
+
+            function refreshRem() {
+                let designSize = 1920; // 设计图尺寸
+                let html = document.documentElement;
+                let wW = html.clientWidth; // 窗口宽度
+                let rem = wW * 100 / designSize;
+
+                document.documentElement.style.fontSize = rem + 'px';
+            }
+
+            win.addEventListener('pageshow', function(e) {
+                if (e.persisted) {
+                    clearTimeout(tid);
+                    tid = setTimeout(refreshRem, 300);
+                }
+            }, false);
+            refreshRem();
+        })(window);
+    </script>
+    
     <script>
         (function(win) {
             var tid;
@@ -615,7 +654,7 @@
                 </a>
                 <ul>
                     <li><a href="gpu.html">GPU Compute</a></li>
-                    <li><a href="cluster.html">Model Inference</a></li>
+                    <li><a href="model.html">Model Inference</a></li>
                 </ul>
             </li>
         </ul>
@@ -763,7 +802,7 @@
                 <div class="item">
                     <h2>LINKS</h2>
                     <a href="gpu.html">GPU Compute</a>
-                    <a href="cluster.html">Model Inference</a>
+                    <a href="model.html">Model Inference</a>
                     <a href="contact.html">Contact</a>
                 </div>
                 <div class="item">

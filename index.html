@@ -2,12 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bitsync: Premier GPU Cloud for AI</title>
+    <title>BitSync: Premier GPU Cloud for AI</title>
     <link rel="icon" type="image/x-icon" href="images/title_icon.png">
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="./css/font.css">
 
+  <script>
+    function isPC() {
+        var userAgentInfo = navigator.userAgent;
+        var agents = ["Android", "iPhone", "iPad"];
+        for (var v = 0; v < agents.length; v++) {
+            if (userAgentInfo.indexOf(agents[v]) > 0) {
+                return false
+            }
+        }
+        return true;
+    }
+    
+    if (!isPC()) {
+        location.href = "http://bitsync.com/index_mobile.html";
+    }
+    
+        (function(win) {
+            var tid;
+
+            function refreshRem() {
+                let designSize = 1920; // 设计图尺寸
+                let html = document.documentElement;
+                let wW = html.clientWidth; // 窗口宽度
+                let rem = wW * 100 / designSize;
+
+                document.documentElement.style.fontSize = rem + 'px';
+            }
+
+            win.addEventListener('pageshow', function(e) {
+                if (e.persisted) {
+                    clearTimeout(tid);
+                    tid = setTimeout(refreshRem, 300);
+                }
+            }, false);
+            refreshRem();
+        })(window);
+    </script>
+    
+    
     <script>
         (function(win) {
             var tid;
@@ -649,7 +688,7 @@ color: #000000;
          Your browser does not support JavaScript!
       </noscript>
 <header>
-    <a href="index.html" class="logo">
+    <a href="https://bitsync.com" class="logo">
         <img src="./images/logo.png">
     </a>
     <div class="nav">
@@ -661,7 +700,7 @@ color: #000000;
                 </a>
                 <ul>
                     <li><a href="gpu.html">GPU Compute</a></li>
-                    <li><a href="cluster.html">Model Inference</a></li>
+                    <li><a href="model.html">Model Inference</a></li>
                 </ul>
             </li>
         </ul>
@@ -765,10 +804,10 @@ color: #000000;
                 </div>
             </div>
             <div class="buttonBox">
-                <button onclick="window.open('cluster.html','_blank')">
+                <button onclick="window.open('model.html','_blank')">
                     Learn More
                 </button>
-                <!--button onclick="window.open('cluster.html','_blank')">
+                <!--button onclick="window.open('model.html','_blank')">
                 Learn More</button-->
             </div>
             <img src="./images/im22.png" style="padding-top:50px">
@@ -804,7 +843,7 @@ color: #000000;
                 <div class="item">
                     <h2>LINKS</h2>
                     <a href="gpu.html">GPU Compute</a>
-                    <a href="cluster.html">Model Inference</a>
+                    <a href="model.html">Model Inference</a>
                     <a href="contact.html">Contact</a>
                 </div>
                 <div class="item">
