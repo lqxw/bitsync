@@ -5,8 +5,8 @@
     <title>BitSync: Premier GPU Cloud for AI</title>
     <link rel="icon" type="image/x-icon" href="images/title_icon.png">
     <meta name="viewport" content="width=device-width">
-
     <link rel="stylesheet" href="./css/font.css">
+    <link rel="stylesheet" href="./css/style.css">
 
   <script>
     function isPC() {
@@ -73,6 +73,7 @@
         body{
             margin: 0;
             padding: 0;
+            font-family: Eudoxus Sans;            
         }
         header{
             width: 100%;
@@ -82,7 +83,7 @@
             justify-content: space-between;
             padding: 0 1.2rem;
             box-sizing: border-box;
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             z-index: 2;
@@ -169,7 +170,8 @@
             width: 2.26rem;
             height: .6rem;
             border-radius: .15rem;
-            background: var(--Button---Black, radial-gradient(57.1% 100% at 50% 99%, #2B3990 0%, rgba(43, 57, 144, 0.83) 100%));
+            // background: var(--Button---Black, radial-gradient(57.1% 100% at 50% 99%, #2B3990 0%, rgba(43, 57, 144, 0.83) 100%));
+            background-color: #A67DB8;
             box-shadow: 0px 6px 28.1px 0px rgba(9, 9, 9, 0.30);
             outline: none;
             border: none;
@@ -188,26 +190,7 @@
             width: .17rem;
             height: auto;
         }
-        .index-banner{
-            width: 100%;
-            height: 8.45rem;
-            position: relative;
-        }
-        .index-banner>img{
-            width: 13.46rem;
-            position: absolute;
-            height: auto;
-            left: .34rem;
-            top: .09rem;
-        }
-        .index-content{
-            position: absolute;
-            width: 6.5rem;
-            left: 10.21rem;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .index-content h2{
+        h2{
             color: #000;
             font-family: Eudoxus Sans;
             font-size: .56rem;
@@ -217,10 +200,10 @@
             margin: 0;
             padding: 0;
         }
-        .index-content h2 span{
+        h2 span{
             color: #00AEEF;
         }
-        .index-content h3{
+        h3{
             margin: 0;
             padding: 0;
             margin: .2rem 0;
@@ -234,7 +217,7 @@
             letter-spacing: 1.92px;
             text-transform: uppercase;
         }
-        .index-content p{
+        p{
             margin: 0;
             padding: 0;
             color: rgba(0, 0, 0, 0.90);
@@ -245,7 +228,7 @@
             line-height: normal;
             letter-spacing: -0.6px;
         }
-        .index-content button{
+        button{
             width: 2.26rem;
             height: .6rem;
             border-radius: .15rem;
@@ -263,7 +246,7 @@
             margin-top: .2rem;
             justify-content: center;
         }
-        .index-content button img{
+        button img{
             margin-left: .1rem;
             width: .17rem;
             height: auto;
@@ -684,10 +667,12 @@ color: #000000;
     </style>
 </head>
 <body>
+
+<body>
      <noscript>
          Your browser does not support JavaScript!
       </noscript>
-<header>
+<header style="background:white">
     <a href="https://bitsync.com" class="logo">
         <img src="./images/logo.png">
     </a>
@@ -698,7 +683,7 @@ color: #000000;
                     Products
                     <img src="./images/arrow.svg">
                 </a>
-                <ul>
+                <ul style="background:white">
                     <li><a href="gpu.html">GPU Compute</a></li>
                     <li><a href="model.html">Model Inference</a></li>
                 </ul>
@@ -710,17 +695,19 @@ color: #000000;
         </a>
     </div>
 </header>
+
 <div class="index-banner">
-    <img src="./images/ib.png" >
-    <div class="index-content">
-        <h2><span>BitSync</span> Cloud</h2>
-        <p style="padding-top:20px">Train and deploy your AI models within minutes!</p>
+    <img class="index-banner-img" src="./images/ib.png" >
+    <div class="index-banner-content">
+        <div class="index-banner-content-t1">A100s Available for $1.23/hr</div>
+        <div class="index-banner-content-t2">BitSync Cloud</div>
+        <div class="index-banner-content-t3">Get Approved and Running Within Minutes!</div>
     </div>
 </div>
 
 
-
-<div class="trustby" style="width:100%;font-size:20px;margin-bottom:-30px;display: flex; justify-content: center; align-items: center; ">Trusted By</div>
+<br>
+<div class="trustby" style="width:100%;font-size:25px;margin-bottom:-30px;display: flex; justify-content: center; align-items: center; ">Trusted By</div>
 <br>
 <div style="width:100%;margin-bottom:0px;display: flex; justify-content: center; align-items: center; justify-content: space-between">
 <img src="images/usenergy.png" alt="alternatetext" style="width:10%;height:100%; padding-left:8%;object-fit: contain">
@@ -756,80 +743,29 @@ color: #000000;
     </div>
 </div>
 
-<div class="sserver" style="width:100%;font-size:30px;margin-bottom:-30px;display: flex; justify-content: center; align-items: center; ">Scalable Servers</div>
-
-<div class="index-model-2">
-    <div class="content">
-        <div class="item">
-            <h2>GPU Compute</h2>
-            <p>Launch containers or virtual machines with the latest NVIDIA GPUs for your AI training, fine tuning, and inference needs.</p>
-            <div class="box">
-                <div>
-                    <img src="./images/1.png">
-                    <p>Tier 4 Datacenters</p>
-                </div>
-                <div>
-                    <img src="./images/2.png">
-                    <p>Free Bandwidth</p>
-                </div>
-                <div>
-                    <img src="./images/3.png">
-                    <p>Lowest Pricing</p>
-                </div>
-            </div>
-            <div class="buttonBox">
-                <button onclick="window.open('gpu.html','_blank')">
-                    Learn More
-                </button>
-                <!--button onclick="window.open('gpu.html','_blank')">
-                Learn More</button-->
-            </div>
-            <img src="./images/im21.png">
+<div class="index-product">
+    <div class="index-product-title" style="font-size:30px">Our Products</div>
+    <div class="index-product-list">
+        <div class="index-product-item">
+            <div class="index-product-item-title">GPU Compute</div>
+            <div class="index-product-item-desc">Launch containers or virtual machines with the latest NVIDIA GPUs for your AI training, fine tuning, and inference needs.</div>
+            <div class="index-product-item-img"><img class="" src="images/im21.png"/></div>
+            <a class="index-product-item-btn" href="gpu.html">Learn More</a>
         </div>
-        <div class="item">
-            <h2>Model Inference</h2>
-            <p>Deploy models by simply upload your .pth or .pb files. We will take care of the rest.</p>
-            <div class="box">
-                <div>
-                    <img src="./images/1.png">
-                    <p>Tier 4 Datacenters</p>
-                </div>
-                <div>
-                    <img src="./images/4.png">
-                    <p>Full Stack Support</p>
-                </div>
-                <div>
-                    <img src="./images/5.png">
-                    <p>Strict Privacy</p>
-                </div>
-            </div>
-            <div class="buttonBox">
-                <button onclick="window.open('model.html','_blank')">
-                    Learn More
-                </button>
-                <!--button onclick="window.open('model.html','_blank')">
-                Learn More</button-->
-            </div>
-            <img src="./images/im22.png" style="padding-top:50px">
+        <div class="index-product-item">
+            <div class="index-product-item-title">Model Inference</div>
+            <div class="index-product-item-desc">Deploy models by simply uploading your .pth or .pb files. We will take care of the rest.</div>
+            <div class="index-product-item-img"><img class="" src="images/im22xx.png"/></div>
+            <a class="index-product-item-btn" href="model.html">Learn More</a>
         </div>
     </div>
 </div>
 
-<div class="index-model-3">
-    <div class="title">
-        <h2>Chat with Sales</h2>
-        <button>
-            <img src="./images/i3i.svg">
-            Response within 15 Minutes
-        </button>
-    </div>
-    <p>Need to deploy GPUs, have a question or need something custom?<br>Contact us and a team member will reach out to you!</p>
-    <div class="buttonBox">
-        <button onclick="window.open('https://calendly.com/support-xyy/30min','_blank')">
-            <img src="./images/i3i2.svg">
-            Schedule a Meeting
-        </button>
-    </div>
+<div class="index-chat">
+    <div class="index-chat-t1"><img src="images/i3i.svg"/> <p style="color:white;font-size:20px"> Response within 15 Minutes </p> </div>
+    <div class="index-chat-t2">Chat with Sales</div>
+    <div class="index-chat-t3">Need to deploy GPUs, have a question or need something custom? Contact us and a team<br/> member will reach out to you!</div>
+    <div class="index-chat-t4" style="font-size:20px" onclick="window.open('https://calendly.com/support-xyy/30min','_blank')"><img src="images/i3i2.svg"/>Schedule a Meeting</div>
 </div>
 
 <footer>
@@ -848,7 +784,7 @@ color: #000000;
                 </div>
                 <div class="item">
                     <h2>Get In Touch</h2>
-                    <p>hello@bitsync.com</p>
+                    <p style="padding-top:10px">hello@bitsync.com</p>
                 </div>
             </div>
         </div>

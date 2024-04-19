@@ -6,6 +6,7 @@
     <title>GPU Compute - BitSync</title>
         <link rel="icon" type="image/x-icon" href="images/title_icon.png">
     <link rel="stylesheet" href="./css/font.css">
+        <link rel="stylesheet" href="./css/style.css">
     
       <script>
     function isPC() {
@@ -80,7 +81,7 @@
             justify-content: space-between;
             padding: 0 1.2rem;
             box-sizing: border-box;
-            position: absolute;
+            position: fixed;
             top: 0;
             z-index: 2;
             left: 0;
@@ -167,7 +168,8 @@
             width: 2.26rem;
             height: .6rem;
             border-radius: .15rem;
-            background: var(--Button---Black, radial-gradient(57.1% 100% at 50% 99%, #2B3990 0%, rgba(43, 57, 144, 0.83) 100%));
+            // background: var(--Button---Black, radial-gradient(57.1% 100% at 50% 99%, #2B3990 0%, rgba(43, 57, 144, 0.83) 100%));
+            background-color: #A67DB8;
             box-shadow: 0px 6px 28.1px 0px rgba(9, 9, 9, 0.30);
             outline: none;
             border: none;
@@ -466,7 +468,7 @@
         }
         .cpu-model-3 .right .content .item:nth-of-type(1) div{
             height: 1.35rem;
-            background: radial-gradient(144.87% 100% at 50% 99%, #6283F5 0%, #4BCEFF 100%);
+            background: radial-gradient(144.87% 100% at 50% 99%, #a67db8 0%, #a67db8 100%);
             border: none;
         }
         .cpu-model-3 .right .content .item:nth-of-type(3) div{
@@ -640,7 +642,7 @@
  <noscript>
          Your browser does not support JavaScript!
       </noscript>
-<header>
+<header style="background:white">
     <a href="index.html" class="logo">
         <img src="./images/logo.png">
     </a>
@@ -651,7 +653,7 @@
                     Products
                     <img src="./images/arrow.svg">
                 </a>
-                <ul>
+                <ul  style="background:white">
                     <li><a href="gpu.html">GPU Compute</a></li>
                     <li><a href="model.html">Model Inference</a></li>
                 </ul>
@@ -667,7 +669,7 @@
 <div class="cpu-banner">
     <img class="left" src="./images/im21.png" >
     <div class="content">
-        <img src="./images/cpu.svg">
+        <img src="./images/cpu.png">
         <p>Unparalleled Access to and pricing for the<br>highest-end NVIDIA GPUs.</p>
     </div>
 </div>
@@ -693,52 +695,98 @@
     </div>
 </div>
 
-<div class="cpu-model-2">
-    <h2>AVAILABLE INSTANCES</h2>
-    <div class="table">
-        <div class="row">
-            <div style="width: 4rem;">GPU</div>
-            <div>vCPU</div>
-            <div>RAM</div>
-            <div>Storage</div>
-            <div style="width: 3rem;">On-demand</div>
-            <div>1 year</div>
-            <div>3 year</div>
+<div class="gpu_ava">
+    <div class="gpu_ava_title">Available Instances</div>
+    <div class="gpu_ava_table">
+        <div class="gpu_ava_table_top">
+            <div class="gpu_ava_table_top_l">BitSync Cloud</div>
+            <div class="gpu_ava_table_top_r">
+                <div class="gpu_ava_table_top_r_item">
+                    <div class="gpu_ava_table_top_r_item_txt">1x GPU</div>
+                    <div class="gpu_ava_table_top_r_item_txt">$/hr</div>
+                </div>
+                <div class="gpu_ava_table_top_r_item">
+                    <div class="gpu_ava_table_top_r_item_txt">8x GPU</div>
+                    <div class="gpu_ava_table_top_r_item_txt">$/hr</div>
+                </div>
+            </div>
         </div>
-        <div class="row">
-            <div style="width: 4rem;">8x A100 80GB SXM</div>
-            <div>96</div>
-            <div>1024GB</div>
-            <div>4TB</div>
-            <div style="width: 3rem;">$13.68</div>
-            <div>$11.60</div>
-            <div>$9.81</div>
-        </div>
-        <div class="row">
-            <div style="width: 4rem;">8x H100 80GB SXM</div>
-            <div>128</div>
-            <div>2048GB</div>
-            <div>8TB</div>
-            <div style="width: 3rem;">$23.01</div>
-            <div>$18.00</div>
-            <div>$14.80</div>
-        </div>
-
-        <div class="row">
-            <div style="width: 4rem;">8x H200 141GB SXM</div>
-            <div>128</div>
-            <div>2048GB</div>
-            <div>8TB</div>
-            <div style="width: 3rem;">Coming Soon</div>
-            <div></div>
-            <div></div>
+        <div class="gpu_ava_table_body">
+            <div class="gpu_ava_table_body_tr">
+                <div class="gpu_ava_table_body_tr_l">
+                    <p class="active">A100 80GB SXM</p>
+                    <p>80 GB VRAM</p>
+                    <p>256 GB RAM</p>
+                    <p>32 vCPU</p>
+                </div>
+                <div class="gpu_ava_table_body_tr_c">
+                    <p>On-Demand</p>
+                    <p>1 Year</p>
+                    <p>3 Years</p>
+                </div>
+                <div class="gpu_ava_table_body_tr_r">
+                    <p>1.75</p>
+                    <p>1.45</p>
+                    <p>1.23</p>
+                </div>
+                <div class="gpu_ava_table_body_tr_r">
+                    <p>14.00</p>
+                    <p>11.60</p>
+                    <p>9.81</p>
+                </div>
+            </div>
+            <div class="gpu_ava_table_body_tr">
+                <div class="gpu_ava_table_body_tr_l">
+                    <p class="active">H100 SXM</p>
+                    <p>80 GB VRAM</p>
+                    <p>256 GB RAM</p>
+                    <p>48 vCPU</p>
+                </div>
+                <div class="gpu_ava_table_body_tr_c">
+                    <p>On-Demand</p>
+                    <p>1 Year</p>
+                    <p>3 Years</p>
+                </div>
+                <div class="gpu_ava_table_body_tr_r">
+                    <p>2.88</p>
+                    <p>2.25</p>
+                    <p>1.85</p>
+                </div>
+                <div class="gpu_ava_table_body_tr_r">
+                    <p>23.01</p>
+                    <p>18.00</p>
+                    <p>14.80</p>
+                </div>
+            </div>
+            <div class="gpu_ava_table_body_tr">
+                <div class="gpu_ava_table_body_tr_l">
+                    <p class="active">H200 (Coming soon)</p>
+                    <p>141 GB VRAM</p>
+                    <p>256 GB RAM</p>
+                    <p>48 vCPU</p>
+                </div>
+                <div class="gpu_ava_table_body_tr_c">
+                    <p>On-Demand</p>
+                    <p>1 Year</p>
+                    <p>3 Years</p>
+                </div>
+                <div class="gpu_ava_table_body_tr_r">
+                    <p>-</p>
+                    <p>-</p>
+                    <p>-</p>
+                </div>
+                <div class="gpu_ava_table_body_tr_r">
+                    <p>-</p>
+                    <p>-</p>
+                    <p>-</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 <div class="cpu-model-3">
     <div class="left">
-        <h2>The Premier <span>GPU Cloud</span><br>For AI and ML</h2>
+        <h2>The Premier  GPU Cloud<br>for AI and ML</h2>
         <p>Reduce your cloud bill by over 70%</p>
         <div>
             <img src="./images/cc.svg">
@@ -771,28 +819,12 @@
         </div>
     </div>
 </div>
-
-<div class="index-model-3">
-    <div class="title">
-        <h2>Chat with Sales</h2>
-        <button>
-            <img src="./images/i3i.svg">
-            Response within 15 Minutes
-        </button>
-    </div>
-    <p>Need to deploy GPUs, have a question or need something custom?<br>Contact us and a team member will reach out to you!</p>
-    <div class="buttonBox">
-        <button onclick="window.open('https://calendly.com/support-xyy/30min','_blank')">
-            <img src="./images/i3i2.svg">
-            Schedule a Meeting
-        </button>
-        <!-- <button onclick="window.open('contact.html','_blank')">
-            Send A Message
-            <img src="./images/i3i3.svg">
-        </button> -->
-    </div>
+<div class="index-chat">
+    <div class="index-chat-t1"><img src="images/i3i.svg"/> <p style="color:white;font-size:20px"> Response within 15 Minutes </p> </div>
+    <div class="index-chat-t2">Chat with Sales</div>
+    <div class="index-chat-t3">Need to deploy GPUs, have a question or need something custom? Contact us and a team<br/> member will reach out to you!</div>
+    <div class="index-chat-t4" style="font-size:20px" onclick="window.open('https://calendly.com/support-xyy/30min','_blank')"><img src="images/i3i2.svg"/>Schedule a Meeting</div>
 </div>
-
 <footer>
     <div class="content">
         <div class="left">

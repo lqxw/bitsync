@@ -56,7 +56,7 @@
             justify-content: space-between;
             padding: 0 1.2rem;
             box-sizing: border-box;
-            position: absolute;
+            position: fixed;
             top: 0;
             z-index: 2;
             left: 0;
@@ -143,7 +143,8 @@
             width: 2.26rem;
             height: .6rem;
             border-radius: .15rem;
-            background: var(--Button---Black, radial-gradient(57.1% 100% at 50% 99%, #2B3990 0%, rgba(43, 57, 144, 0.83) 100%));
+            // background: var(--Button---Black, radial-gradient(57.1% 100% at 50% 99%, #2B3990 0%, rgba(43, 57, 144, 0.83) 100%));
+            background-color: #A67DB8;
             box-shadow: 0px 6px 28.1px 0px rgba(9, 9, 9, 0.30);
             outline: none;
             border: none;
@@ -262,7 +263,7 @@
             padding: 0px 0.56rem;
             align-items: center;
             border-radius: .15rem;
-            background: #2B3990;
+            background: #A67DB8;
             color: #FFF;
             font-family: Eudoxus Sans;
             font-size: .22rem;
@@ -281,7 +282,7 @@
             align-items: center;
             border-radius: .15rem;
             border: 0.5px solid rgba(255, 255, 255, 0.87);
-            background: var(--Secondary, #2B3990);
+            background: var(--Secondary, #A67DB8);
             color: #FFF;
             font-family: Eudoxus Sans;
             font-size: .24rem;
@@ -369,7 +370,7 @@
      <noscript>
          Your browser does not support JavaScript!
       </noscript>
-<header>
+<header style="background:white">
     <a href="index.html" class="logo">
         <img src="./images/logo.png">
     </a>
@@ -380,7 +381,7 @@
                     Products
                     <img src="./images/arrow.svg">
                 </a>
-                <ul>
+                <ul style="background:white">
                     <li><a href="gpu.html">GPU Compute</a></li>
                     <li><a href="model.html">Model Inference</a></li>
                 </ul>
