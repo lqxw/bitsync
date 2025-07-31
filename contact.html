@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="referrer" content="no-referrer">
     <link rel="stylesheet" href="./css/font.css">
     <title>Contact Us - BitSync</title>
         <link rel="icon" type="image/x-icon" href="images/title_icon.png">
@@ -425,7 +424,8 @@ function mailToAddress() {
 function sendJCFastEmail(subject, body, email) {
     var jsonData = {subject: subject, body: body, email: email};
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("POST", "https://message.gpu.ai/SendMessage", false);
+    xmlHttp.open("POST", "https://message.gpu.ai/SendMessage", true);
+    xmlHttp.withCredentials = true;
     xmlHttp.setRequestHeader("Content-Type", "application/json");
     xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
