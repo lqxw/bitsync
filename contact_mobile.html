@@ -104,14 +104,15 @@ function mailToAddress() {
     }
     text = "Name:"+firstname+" "+lastname+"\nCompany:"+company+"\nEmail:" + email+"\nMessage:"+message;
     backupText = "Name:"+firstname+" "+lastname+"%0D%0A\nCompany:"+company+"%0D%0A\nEmail:" + email+"%0D%0A\nMessage:"+message;
-    // sendJCFastEmail("GPU Server Inquire", text, "hello@bitsync.com");
-    document.location.href = ("mailto:hello@bitsync.com?subject=GPU Server Inquire&body="+backupText);
+    sendJCFastEmail("GPU Server Inquire", text, "hello@bitsync.com");
+    //document.location.href = ("mailto:hello@bitsync.com?subject=GPU Server Inquire&body="+backupText);
 }
 
 function sendJCFastEmail(subject, body, email) {
     var jsonData = {subject: subject, body: body, email: email};
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open("POST", "https://message.gpu.ai/SendMessage"", false);
+    xmlHttp.open("POST", "https://message.gpu.ai/SendMessage", true);
+    xmlHttp.withCredentials = true;
     xmlHttp.setRequestHeader("Content-Type", "application/json");
     xmlHttp.onreadystatechange = function() {
         if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
